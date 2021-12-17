@@ -1,0 +1,71 @@
+@model WebApplication.Models.LoginViewModel
+
+<div class="wrapper">
+    <div class="body">
+        <div class="content">
+            <img class="background" src="~/images/background_main_header.png" alt="background_main_header">
+            <div class="image LH">
+                <img class="img_char" src="~/images/Pandemonica/Pand_idle.png" alt="Lusy">
+            </div>
+            <div class="char__door">
+                <a asp-controller="Home" asp-action="Index">
+                    <img class="exit__door" src="~/images/char_door.png" alt="char_door">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="text__bars">
+                <div class="name">
+                    <div class="title__text">
+                        <p class="dot">•</p>
+                        <p>Pandemonica, The Tired Demon</p>
+                        <p class="dot">•</p>
+                    </div>
+                </div>
+                <div class="info__block">
+                    <div class="quote__block">
+                        <p class="quote">"This is the login page. Please identify yourself."</p>
+                    </div>
+                    <div class="input__block">
+                        <div class="input__block">
+                            <form asp-area="" asp-controller="Account" asp-action="Login" method="post" asp-route-returnUrl="@ViewBag.returnUrl">
+                                <div asp-validator-summary="All"></div>
+                                <div class="form-row">
+                                    <input asp-for="UserName" type="text" id="email" required autocomplete="off">
+                                    <label asp-for="UserName">UserName</label>
+                                </div>
+                                <div class="form-row">
+                                    <input asp-for="Password" type="password" id="password" required autocomplete="off">
+                                    <label asp-for="Password">Password</label>
+                                </div>
+
+                                <div class="checkbox__block">
+                                    <div class="checkbox__colum">
+                                        <label class="label">
+                                            <input asp-for="RememberMe" type="checkbox" class="checkbox" id="с3">
+                                            <span class="cb__fake"></span>
+                                            <label asp-for="RememberMe">RememberMe</label>
+                                        </label>
+
+                                    </div>
+                                </div>
+                                <button class="submit" type="submit">Войти</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+@section StyleForChar
+{
+    <link rel="stylesheet" href="~/css/styleforchar.css" asp-append-version="true">
+}
+
+
+

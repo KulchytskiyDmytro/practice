@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/styleforchar.css">
+    <link rel="shortcut icon" type="image/ico" href="~/images/favicon.ico" asp-append-version="true">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@700&display=swap" rel="stylesheet" asp-append-version="true">
+    <title>Admin Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="body">
+            <div class="content">
+                <img class="background" src="~/images/background_main_header.png" alt="background_main_header">
+                <div class="image LH">
+                    <img class="img_char" src="~/images/Pandemonica/Pand_idle.png" alt="Lusy">
+                </div>
+                @await RenderSectionAsync("button", false)
+            </div>
+        </div>
+
+        <footer>
+            <div class="foot">
+                <div class="text__bars">
+                    <div class="name">
+                        <div class="title__text">
+                            <p class="dot">•</p>
+                            <p>Pandemonica, The Tired Demon</p>
+                            <p class="dot">•</p>
+                        </div>
+                    </div>
+                    <div class="info__block">
+                        <div class="quote__block">
+                            <p class="quote">"Welcome to admin page. It's your time to set reality."</p>
+                        </div>
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

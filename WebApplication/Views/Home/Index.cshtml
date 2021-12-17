@@ -1,0 +1,52 @@
+@model IQueryable<ServiceItem>
+
+@section Header
+{
+    <link rel="stylesheet" href="~/css/styleforhub.css">
+}
+<div class="wrapper">
+
+    <div class="header">
+        <div class="title">
+            <img class="logo" src="~/images/title.png" alt="title">
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="content">
+            @if (Model.Any())
+            {
+                @foreach (ServiceItem entity in Model) 
+                {
+                    <div class="character">
+                        <a class="char__block" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">
+                            <div class="back__text__hover">
+                                <img class="img" src="@entity.TitleImagePath" alt="image not found">
+                                <div class="text__hover">
+                                    <div class="text">
+                                        <div class="name__char">
+                                            <p class="dot">•</p>
+                                            <p>@entity.NameChar </p>
+                                            <p class="dot">•</p>
+                                        </div>
+                                        <div class="short__info">
+                                            @entity.NameRank
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    
+        <div class="footer">
+            <div class="footer__door">
+                <a href="index.html">
+                    <img class="hub__door" src="~/images/hub_door.png" alt="hub_door">
+                </a>
+            </div>
+        </div>
+</div>

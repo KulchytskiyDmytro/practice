@@ -1,0 +1,74 @@
+@model ServiceItem
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="panel">
+
+        <form asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id">
+            <div asp-validation-summary="All"></div>
+            <div class="blocks">
+                <div class="block">
+                    <label asp-for="Title"></label>
+                    <input asp-for="Title">
+                    <span asp-validation-for="Title"></span>
+                </div>
+
+                <div class="block">
+                    <label asp-for="NameChar"></label>
+                    <input asp-for="NameChar">
+                    <span asp-validation-for="NameChar"></span>
+                </div>
+                <div class="block">
+                    <label asp-for="NameRank"></label>
+                    <input asp-for="NameRank">
+                    <span asp-validation-for="NameRank"></span>
+                </div>
+                <div class="block">
+                    <label asp-for="Quote"></label>
+                    <input asp-for="Quote">
+                    <span asp-validation-for="Quote"></span>
+                </div>
+            </div>
+            <div class="block__text">
+                <label asp-for="Text"></label>
+                <textarea asp-for="Text"></textarea>
+                <span asp-validation-for="Text"></span>
+            </div>
+            <div class="blocks">
+                <div class="block">
+                    <label asp-for="Image"></label>
+                    <input asp-for="Image">
+                    <div class="image__input">
+                        <img class="img__block" src="@Model.Image" />
+                    </div>
+                </div>
+                <div class="block">
+                    <label asp-for="ImageText"></label>
+                    <input asp-for="ImageText">
+                    <div class="image__input">
+                        <img class="img__block" src="@Model.ImageText" />
+                    </div>
+                </div>
+                <div class="block">
+                    <label asp-for="TitleImagePath"></label>
+                    <input asp-for="TitleImagePath">
+                    <div class="image__input">
+                        <img class="img__block" src="@Model.TitleImagePath" />
+                    </div>
+                </div>
+            </div>
+            <div class="input__save">
+                <input type="submit" value="Save">
+            </div>
+        </form>
+    </div>
+
+@section button{
+    <div class="char__door">
+        <a href="/admin" >
+            <img class="exit__door" src="~/images/char_door.png" alt="char_door">
+        </a>
+    </div>
+}

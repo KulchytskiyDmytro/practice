@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @await Html.PartialAsync("MetatagsPartial")
+    @await Html.PartialAsync("CssPartial")
+    @RenderSection("Header", false)
+    @RenderSection("CharHeader", false)
+    @RenderSection("StyleForChar", false)
+</head>
+
+<body>
+@RenderBody()
+</body>
+
+</html>   

@@ -1,0 +1,53 @@
+@model WebApplication.Domain.Entities.ServiceItem
+
+@section CharHeader
+{
+    <link rel="stylesheet" href="~/css/styleforchar.css" asp-append-version="true">
+}
+@{
+    Layout = "_Layout";
+}
+<title>@Model.Title</title>
+<div class="wrapper">
+    
+    <div class="body">
+        <div class="content">
+            <img class="background" src="~/images/background_main_header.png" alt="background_main_header">
+            <div class="image LH">
+                <img class="img_char" src="@Model.Image" alt="Lusy">
+            </div>
+            <div class="char__door">
+                <a asp-controller="Home" asp-action="Index">
+                    <img class="exit__door" src="~/images/char_door.png" alt="char_door">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="text__bars">
+                <div class="name">
+                    <div class="title__text">
+                        <p class="dot">•</p>
+                        <p>@Model.NameChar, @Model.NameRank</p>
+                        <p class="dot">•</p>
+                    </div>
+                </div>
+                <div class="info__block">
+                    <div class="quote__block">
+                        <p class="quote">"@Model.Quote"</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__block__top ">
+                            <p>@Model.Text</p>
+                        </div>
+                        <div class="image__text ">
+                            <img class="imgfortetx" src="@Model.ImageText" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

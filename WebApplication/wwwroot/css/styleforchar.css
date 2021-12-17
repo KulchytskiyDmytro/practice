@@ -1,0 +1,370 @@
+.wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.body {
+    width: 100%;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+}
+
+.foot {
+    width: 100%;
+    background-color: #02021A;
+}
+
+.content {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.image__text {
+    width: 35%;
+}
+
+.panel {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: 20%;
+    text-align: center;
+    height: auto;
+}
+
+.block label {
+    margin: 0 auto;
+    margin: 2%;
+}
+
+.block input {
+    padding: 2%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.block__text {
+    margin: 5%;
+    margin: 0% auto;
+    width: 60%;
+    padding: 2%;
+    background-color: #88888828;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+}
+
+textarea {
+    width: 100%;
+    height: 500px;
+    resize: none;
+}
+
+.input__save {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.input__save input {
+    width: 100%;
+}
+
+.adminpage__block {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bth__action {
+    display: flex;
+    margin: 10%;
+}
+
+.element__bth {
+    text-decoration: none;
+    width: 25%;
+}
+.img__block{
+    width: 100%;
+}
+/* Логин страница */
+
+.checkbox {
+    display: none;
+}
+
+.cb__fake {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border: 3px solid #e4e4e4;
+    position: relative;
+}
+
+.cb__fake::before {
+    content: "";
+    position: absolute;
+    display: block;
+    font-size: 10px;
+    width: 20px;
+    height: 8px;
+    border-radius: 1px;
+    border-left: 4px solid #C3494B;
+    border-bottom: 4px solid #C3494B;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    opacity: 0;
+}
+
+.checkbox:checked+.cb__fake::before {
+    opacity: 1;
+}
+
+.input__block {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-row {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.form-row input {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    background: none;
+    border-width: 0;
+    border-bottom: 2px solid #C3494B;
+    color: #C3494B;
+    font-size: 1.7vw;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -moz-text-decoration-color: #C3494B;
+}
+
+.form-row label {
+    position: absolute;
+    left: 13px;
+    color: #9d959d;
+    font-size: 20px;
+    font-weight: 300;
+    transform: translateY(-35px);
+    transition: all 0.2s ease;
+}
+
+.form-row input:focus {
+    outline: 0;
+    border-color: #F77A52;
+}
+
+.form-row input:focus+label,
+.form-row input:valid+label {
+    transform: translateY(-60px);
+    margin-left: -14px;
+    font-size: 14px;
+    font-weight: 400;
+    outline: 0;
+    border-color: #F77A52;
+    color: #F77A52;
+}
+
+.ui-form [type="submit"] {
+    width: 98%;
+    line-height: 42px;
+    background: #C3494B;
+    border-width: 0;
+    color: white;
+    font-size: 20px;
+}
+
+.ui-form p {
+    margin: 0;
+    padding-top: 10px;
+}
+
+
+/* Стили текта */
+
+.title__text {
+    display: flex;
+    justify-content: center;
+    font-family: 'Crimson Pro', serif;
+    color: #C3494B;
+    font-size: 1.9vw;
+    text-align: center;
+    padding: 1%;
+}
+
+.quote__block {
+    width: 100%;
+}
+
+.quote {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+.text__block {
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    margin: 0% auto;
+    width: 60%;
+    background-color: #88888828;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+}
+
+.text__block__top {
+    text-align: left;
+    padding: 1%;
+    width: 65%;
+    font-size: 1.5vw;
+}
+
+.text__block__top p {
+    padding: 3%;
+}
+
+.imgfortetx {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: auto;
+}
+
+.info__block {
+    -webkit-animation: text__opacity 0.8s;
+    font-family: 'Crimson Pro', serif;
+    color: #e4e4e4;
+    font-size: 1.7vw;
+}
+
+.dot {
+    font-size: 1.9vw;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+.image {
+
+    transform: translatez(0);
+    -webkit-animation: character__opacity 0.5s;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    z-index: 100;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+.char__door {
+    z-index: 1000;
+    width: 4%;
+    left: 1%;
+    top: 3%;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.exit__door {
+    width: 100%;
+}
+
+.char__door:hover {
+    opacity: 1;
+}
+.img_char{
+    margin: 0 auto;
+
+}
+/* 
+    -------------------------------------------- 
+                       КНОПКИ
+    -------------------------------------------- 
+*/
+
+.dialoge__menu {
+    display: flex;
+    justify-content: center;
+    padding: 2.2%;
+    width: 10%;
+    height: auto;
+    margin: 0% auto;
+}
+
+.bth__dialoge {
+    display: flex;
+    width: 100%;
+}
+
+.dialoge {
+    display: flex;
+    float: left;
+}
+
+
+/* Анимации */
+
+@-webkit-keyframes character__opacity {
+    0% {
+        padding: 0;
+        opacity: 0;
+        margin: auto;
+        left: 200%;
+        bottom: 0;
+        right: 0;
+    }
+    100% {
+        padding: 0;
+        opacity: 1;
+        margin: auto;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@-webkit-keyframes text__opacity {
+    0% {
+        padding: 0;
+        opacity: 0;
+    }
+    100% {
+        padding: 0;
+        opacity: 1;
+    }
+}
